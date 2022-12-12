@@ -4,6 +4,6 @@ This is my simple multiple choice game.
 im using reactjs.
 
 
-Instagram: instagram.com/fadliiamd_/
+Instagram: www.instagram.com/fadliiamd_/
 
-Twitter: twitter.com/fadliiamd_/
+Twitter: www.twitter.com/fadliiamd_/
