@@ -1,14 +1,14 @@
 {
     "data": [
         {
-            "question": "Ibu kota Indonesia saat ini?",
-            "choices": ["Jakarta", "Lampung", "Medan", "Surabaya"],
-            "answer": "Jakarta"
+            "question": "Manakah di bawah ini yang merupakan landmark dari Italia?",
+            "choices": ["Patung Liberty", "Menara Pisa", "Menara Eifel", "Piramida"],
+            "answer": "Menara Pisa"
         },
         {
-            "question": "Presiden pertama Indonesia?",
-            "choices": ["Sukarno", "Suharto", "SBY", "BJ Habibie"],
-            "answer": "Sukarno"
+            "question": "Perserikatan bangsa eropa yaitu?",
+            "choices": ["Uni Eropa", "NATO", "PBB", "Unesco"],
+            "answer": "Uni Eropa"
         },
         {
             "question": "Presiden pertama Indonesia?",
