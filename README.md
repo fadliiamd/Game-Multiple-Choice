@@ -3,5 +3,5 @@ Hello,
 This is my simple multiple choice game.
 im using reactjs.
 
-instagram: www.instagram.com/fadliiamd
-twitter: www.twitter.com/fadliiamd
+instagram: https://www.instagram.com/fadliiamd_/
+twitter: https://twitter.com/fadliiamd_
