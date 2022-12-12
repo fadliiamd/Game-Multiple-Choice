@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "question": "Ibu kota Indonesia saat ini?",
+            "choices": ["Jakarta", "Lampung", "Medan", "Surabaya"],
+            "answer": "Jakarta"
+        },
+        {
+            "question": "Presiden pertama Indonesia?",
+            "choices": ["Sukarno", "Suharto", "SBY", "BJ Habibie"],
+            "answer": "Sukarno"
+        },
+        {
+            "question": "Presiden pertama Indonesia?",
+            "choices": ["Sukarno", "Suharto", "SBY", "BJ Habibie"],
+            "answer": "Sukarno"
+        },
+        {
+            "question": "Piala dunia 2022 diselenggarakan dimana?",
+            "choices": ["Perancis", "Qatar", "Turkey", "Maroko"],
+            "answer": "Qatar"
+        }
+    ]
+}
