@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import React from 'react';
 
 const Question = ({ data, onAnswerUpdate, activeQuestion, numberOfQuestion, onSetActiveQuestion }) => {
 
-    const[selected, setSelected] = useState(0);
+    const [selected, setSelected] = useState(0);
+    const radiosWrapper = useRef();
+
+    useEffect(() => {
+        const finCheckedInput = radiosWrapper.current.querySelector('input:checked');
+        if(finCheckedInput) {
+            finCheckedInput.checked = false;
+        }
+    }, [data])
     
     const changeHandler = (e) => {
         setSelected(e.target.value);
@@ -24,7 +32,7 @@ const Question = ({ data, onAnswerUpdate, activeQuestion, numberOfQuestion, onSe
                     <div className="card-content">
                         <div className="content">
                             <h2 className="mb-5">{data.question}</h2>
-                            <div className="control">
+                            <div className="control" ref={radiosWrapper}>
                                 {data.choices.map((choice, key) => (
                                         
                                             <label className="radio has-background" key={key}>

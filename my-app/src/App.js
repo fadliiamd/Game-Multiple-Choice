@@ -23,7 +23,7 @@ function App() {
   const quizStartHandler = () => {
     setStap(2);
   }
-
+  console.log(answer)
   return (
     <div className="App">
       {console.log(resultArray[1])}
