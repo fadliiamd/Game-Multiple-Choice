@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { formatTime } from '../utils/index';
 import React from 'react';
 
-const Question = ({ data, onAnswerUpdate, activeQuestion, numberOfQuestion, onSetActiveQuestion }) => {
-
-    const [selected, setSelected] = useState(0);
+const Question = ({ data, onAnswerUpdate, activeQuestion, numberOfQuestion, onSetActiveQuestion, onesetStep, time }) => {
+    const [selected, setSelected] = useState('');
+    const [error, setError] = useState('');
     const radiosWrapper = useRef();
 
     useEffect(() => {
@@ -15,11 +16,21 @@ const Question = ({ data, onAnswerUpdate, activeQuestion, numberOfQuestion, onSe
     
     const changeHandler = (e) => {
         setSelected(e.target.value);
+        if(error) {
+            setError('')
+        }
     }
+
     const nextClickHandler = () => {
-        onAnswerUpdate(prevState => [...prevState, {q: data.question, a: selected}])
+        if (selected === '') {
+            return setError('Silahkan Pilih Jawaban Terlebih Dahulu');
+        }
+        onAnswerUpdate(prevState => [...prevState, { q: data.question, a: selected }]);
+        setSelected('')
         if (activeQuestion < numberOfQuestion - 1) {
             onSetActiveQuestion(activeQuestion+1)
+        } else {
+            onesetStep(3);
         }
 
     }
@@ -27,7 +38,10 @@ const Question = ({ data, onAnswerUpdate, activeQuestion, numberOfQuestion, onSe
 
     return (
         <>
-        <div style={{ display: 'table-row' }}>
+            <div style={{ display: 'table-row' }}>
+                <div>
+                    <h5 style={{ textAlign: 'center', marginBottom: 20, fontSize: 20 }}>{formatTime(time)}</h5>
+                </div>
                 <div className="card">
                     <div className="card-content">
                         <div className="content">
